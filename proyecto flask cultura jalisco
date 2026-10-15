@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bebidas tradicionales de Jalisco: tequila, raicilla, sangrita y tejuino.">
+  <title>Bebidas · Cultura de Jalisco</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="bebidas.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="#inicio">Jalisco</a>
+
+      <nav class="nav-menu" aria-label="Principal">
+        <nav class="nav-menu" aria-label="Principal">
+  <ul>
+    <li><a href="inicio.html">Inicio</a></li>
+    <li><a href="musica.html">Música</a></li>
+    <li><a href="danza.html">Danza</a></li>
+    <li><a href="destinos.html">Destinos turísticos</a></li>
+    <li><a href="Bebidas.html">Bebidas</a></li>
+    <li><a href="Comidas.html">Comidas</a></li>
+    <li><a href="Postres.html">Postres</a></li>
+  </ul>
+</nav>
+      </nav>
+    </div>
+  </header>
+
+  <main id="bebidas">
+
+    <section class="intro">
+      <h1 class="title">Bebidas</h1>
+      <p class="lead">Cuatro sabores que nacieron en la tierra del agave y del maíz, y que siguen acompañando las fiestas, las comidas y la vida diaria de Jalisco.</p>
+    </section>
+
+    <section class="menu" aria-label="Lista de bebidas">
+
+      <article class="drink">
+        <svg class="drink-icon" style="--d: 0.3s" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <g transform="translate(60 100)">
+            <path pathLength="1" transform="rotate(-62)" d="M0 0C-11-10-11-36 0-56C11-36 11-10 0 0Z"/>
+            <path pathLength="1" transform="rotate(-36)" d="M0 0C-11-10-11-36 0-56C11-36 11-10 0 0Z"/>
+            <path pathLength="1" transform="rotate(-12)" d="M0 0C-11-10-11-36 0-56C11-36 11-10 0 0Z"/>
+            <path pathLength="1" transform="rotate(12)" d="M0 0C-11-10-11-36 0-56C11-36 11-10 0 0Z"/>
+            <path pathLength="1" transform="rotate(36)" d="M0 0C-11-10-11-36 0-56C11-36 11-10 0 0Z"/>
+            <path pathLength="1" transform="rotate(62)" d="M0 0C-11-10-11-36 0-56C11-36 11-10 0 0Z"/>
+          </g>
+          <path pathLength="1" d="M22 102H98"/>
+        </svg>
+        <h2 class="drink-name">Tequila</h2>
+        <p class="drink-sub">El espíritu más icónico de Jalisco</p>
+        <p class="drink-text">Se elabora con agave azul, cocido, fermentado y destilado. Su origen está protegido por una denominación de origen, y su cuna es el pueblo de Tequila.</p>
+        <dl class="drink-facts">
+          <div><dt>Tipo</dt><dd>Destilado</dd></div>
+          <div><dt>Estilos</dt><dd>Blanco, reposado y añejo</dd></div>
+        </dl>
+      </article>
+
+      <article class="drink">
+        <svg class="drink-icon" style="--d: 0.45s" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path pathLength="1" d="M50 14H70"/>
+          <path pathLength="1" d="M52 18H68V38C68 44 80 48 80 62V98Q80 104 74 104H46Q40 104 40 98V62C40 48 52 44 52 38Z"/>
+          <path pathLength="1" d="M46 66H74V88H46Z"/>
+          <path pathLength="1" d="M50 82L58 72L63 78L68 71L72 82"/>
+        </svg>
+        <h2 class="drink-name">Raicilla</h2>
+        <p class="drink-sub">El destilado rústico de la sierra</p>
+        <p class="drink-text">Se produce de forma artesanal en comunidades de la Sierra Madre y la costa de Jalisco. Cada región le imprime un carácter propio, intenso y terroso.</p>
+        <dl class="drink-facts">
+          <div><dt>Tipo</dt><dd>Destilado</dd></div>
+          <div><dt>Base</dt><dd>Agaves diversos</dd></div>
+        </dl>
+      </article>
+
+      <article class="drink">
+        <svg class="drink-icon" style="--d: 0.6s" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path pathLength="1" d="M20 52H68V64C68 86 56 96 44 96C32 96 20 86 20 64Z"/>
+          <path pathLength="1" d="M20 66H68"/>
+          <path pathLength="1" d="M72 32a14 14 0 1 0 28 0a14 14 0 1 0-28 0"/>
+          <path pathLength="1" d="M77 32a9 9 0 1 0 18 0a9 9 0 1 0-18 0"/>
+          <path pathLength="1" d="M86 23V41M77 32H95M80 26L92 38M92 26L80 38"/>
+        </svg>
+        <h2 class="drink-name">Sangrita</h2>
+        <p class="drink-sub">El compañero ideal del tequila</p>
+        <p class="drink-text">Mezcla de jugo de naranja, limón, jitomate y chile, con un toque de granada. Se sirve en caballito, a sorbos alternados con el tequila.</p>
+        <dl class="drink-facts">
+          <div><dt>Tipo</dt><dd>Acompañante</dd></div>
+          <div><dt>Sabor</dt><dd>Ácido y picante</dd></div>
+        </dl>
+      </article>
+
+      <article class="drink">
+        <svg class="drink-icon" style="--d: 0.75s" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path pathLength="1" d="M28 48a32 8 0 1 0 64 0a32 8 0 1 0-64 0"/>
+          <path pathLength="1" d="M28 48C28 78 42 98 60 98C78 98 92 78 92 48"/>
+          <path pathLength="1" d="M34 64Q43 59 52 64T70 64T86 64"/>
+          <path pathLength="1" d="M48 80a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/>
+          <path pathLength="1" d="M64 86a1.6 1.6 0 1 0 3.2 0a1.6 1.6 0 1 0-3.2 0"/>
+          <path pathLength="1" d="M58 72a1.4 1.4 0 1 0 2.8 0a1.4 1.4 0 1 0-2.8 0"/>
+        </svg>
+        <h2 class="drink-name">Tejuino</h2>
+        <p class="drink-sub">La bebida de maíz de Guadalajara</p>
+        <p class="drink-text">Se prepara con masa de maíz fermentada, piloncillo y agua. Es un clásico refrescante de las tejuinerías tapatías, ideal para los días de calor.</p>
+        <dl class="drink-facts">
+          <div><dt>Tipo</dt><dd>Fermentada</dd></div>
+          <div><dt>Se sirve</dt><dd>Fría, con limón y sal</dd></div>
+        </dl>
+      </article>
+
+    </section>
+  </main>
+
+</body>
+</html>
