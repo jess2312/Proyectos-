@@ -1,0 +1,349 @@
+/* Estilos de la página de Bebidas */
+:root {
+  --night:  #5f0a0af6;
+  --bone: #efe7d7;
+  --mist: rgba(239, 231, 215, 0.66);
+  --copper: #c58a57;
+  --copper-soft: #e7b98e;
+  --line: rgba(239, 231, 215, 0.14);
+  --serif: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --sans: "Jost", "Futura", "Century Gothic", "Helvetica Neue", Arial, sans-serif;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--night);
+  color: var(--bone);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 1px solid var(--copper-soft);
+  outline-offset: 6px;
+}
+
+/* ---------- Barra de navegación ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(13, 33, 31, 0.86);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.6rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.9rem;
+  line-height: 1;
+  color: var(--bone);
+  text-decoration: none;
+}
+
+.nav-menu ul {
+  display: flex;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu a {
+  position: relative;
+  display: inline-block;
+  padding: 0.4rem 0;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: var(--mist);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--copper);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s var(--ease);
+}
+
+.nav-menu a:hover {
+  color: var(--bone);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+.nav-menu a[aria-current="page"] {
+  color: var(--copper-soft);
+}
+
+/* ---------- Título en dos columnas ---------- */
+
+.intro {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 7rem 4rem 5.5rem;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: end;
+  gap: 4rem;
+  animation: rise 1.1s var(--ease) backwards;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(6rem, 11vw, 11rem);
+  line-height: 0.9;
+  letter-spacing: -0.025em;
+  color: var(--bone);
+}
+
+.lead {
+  max-width: 26rem;
+  margin: 0;
+  padding-left: 1.6rem;
+  border-left: 1px solid var(--copper);
+  font-size: 1.12rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--mist);
+  justify-self: end;
+}
+
+/* ---------- Carta de bebidas ---------- */
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 4rem 8rem;
+  border-top: 1px solid var(--line);
+}
+
+.drink {
+  padding: 3.2rem 2.6rem 3rem;
+  text-align: center;
+  transition: background-color 0.6s var(--ease);
+}
+
+.drink + .drink {
+  border-left: 1px solid var(--line);
+}
+
+.drink:hover {
+  background-color: rgba(239, 231, 215, 0.025);
+}
+
+.drink-icon {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 1.8rem;
+  color: var(--copper);
+  transition: transform 0.6s var(--ease), color 0.6s ease;
+}
+
+.drink:hover .drink-icon {
+  transform: translateY(-5px);
+  color: var(--copper-soft);
+}
+
+.drink-icon path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw 1.8s var(--ease) forwards;
+  animation-delay: var(--d, 0s);
+}
+
+.drink-name {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 2.9rem;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--bone);
+}
+
+.drink-sub {
+  margin: 0.6rem 0 1.5rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.35;
+  color: var(--copper-soft);
+}
+
+.drink-text {
+  max-width: 32ch;
+  margin: 0 auto;
+  font-size: 1.02rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--mist);
+}
+
+.drink-facts {
+  margin: 2.2rem 0 0;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+}
+
+.drink-facts div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.2rem;
+  padding: 0.6rem 0;
+  font-size: 0.95rem;
+}
+
+.drink-facts dt {
+  color: var(--mist);
+}
+
+.drink-facts dd {
+  margin: 0;
+  text-align: right;
+  color: var(--bone);
+}
+
+/* ---------- Pantallas más estrechas ---------- */
+
+@media (max-width: 1080px) {
+  .nav-inner {
+    padding: 1.4rem 2.5rem;
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 5.5rem 2.5rem 4rem;
+  }
+
+  .lead {
+    justify-self: start;
+  }
+
+  .menu {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 2.5rem 6rem;
+  }
+
+  .drink + .drink {
+    border-left: 0;
+  }
+
+  .drink:nth-child(even) {
+    border-left: 1px solid var(--line);
+  }
+
+  .drink:nth-child(-n + 2) {
+    border-top: 0;
+  }
+
+  .drink:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 680px) {
+  .nav-inner {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .nav-menu ul {
+    gap: 1.2rem;
+  }
+
+  .nav-menu a {
+    font-size: 0.85rem;
+  }
+
+  .intro {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .menu {
+    grid-template-columns: 1fr;
+    padding: 0 1.5rem 5rem;
+  }
+
+  .drink:nth-child(even) {
+    border-left: 0;
+  }
+
+  .drink:nth-child(-n + 2) {
+    border-top: 1px solid var(--line);
+  }
+
+  .drink:first-child {
+    border-top: 0;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .drink-icon path {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+  }
+}
